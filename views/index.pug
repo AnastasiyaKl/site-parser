@@ -1,0 +1,48 @@
+html
+    head
+        style
+            include ../style.css
+        link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" )
+        title= title
+    body
+        form.form-inline.mt-3
+            input.form-control.ml-2#country-input(
+                type='text'
+                name='country'
+                placeholder='Country'
+            )
+            input.form-control.ml-2#company-input(
+                type='text'
+                name='company'
+                placeholder='Company'
+            )
+            input.form-control.ml-2#port-name-input(
+                type='text'
+                name='port-name'
+                placeholder='Port Name'
+            )
+            input.btn.btn-primary.ml-2#search-input(
+                type='button'
+                name='country'
+                value='Search'
+            )
+        table.table.table-striped
+            thead
+                tr
+                    th №
+                    th company
+                    th port name
+                    th county
+                    th lon
+                    th lat
+            tbody
+                each key, index in obj
+                    tr
+                        td= index
+                        td= key.company_name
+                        td= key.port_name
+                        td= key.country_code
+                        td= key.lon
+                        td= key.lat
+        script
+            include ../queries.js

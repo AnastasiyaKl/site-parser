@@ -1,0 +1,25 @@
+{
+  "name": "pars",
+  "version": "1.0.0",
+  "description": "",
+  "main": "df.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "form-data": "^2.3.3",
+    "fs": "0.0.1-security",
+    "http": "0.0.0",
+    "node-fetch": "^2.3.0",
+    "pg": "^7.8.2",
+    "pug": "^2.0.3"
+  },
+  "devDependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4"
+  }
+}
