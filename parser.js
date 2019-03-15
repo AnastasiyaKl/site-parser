@@ -10,8 +10,6 @@ const queryUrl = 'https://www.searates.com/map/get-ports-sealines';
 
 let companies = [];
 
-// fs.open('parsed-data.json', 'w', () => console.log('file opened'));
-
 rp.post(
     {
         uri: url,
@@ -55,7 +53,6 @@ rp.post(
           fs.writeFile('./parsed-data.json', JSON.stringify(formedData), () => {console.log('file written')});
         })
     }
-    // setTimeout(() => fs.writeFile('parsed-data.json', JSON.stringify(formedData), () => console.log("file written successfully")), 10000);
   })
 
 

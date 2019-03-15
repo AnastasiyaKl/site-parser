@@ -5,7 +5,10 @@ html
         link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" )
         title= title
     body
-        form.form-inline.mt-3
+        form.form-inline.mt-3(
+            method='POST'
+            action='/data'
+        )
             input.form-control.ml-2#country-input(
                 type='text'
                 name='country'
@@ -43,5 +46,6 @@ html
                         td= key.port_name
                         td= key.country_code
                         td= key.lon
-                        td= key.lat        script
-            include ../queries.js
+                        td= key.lat
+            script
+                include ../queries.js

@@ -1,7 +1,5 @@
 const {Client} = require('pg');
 
-// const connectionString = '';
-
 let data = [];
 
 const client = new Client({
@@ -12,20 +10,8 @@ const client = new Client({
     port: '5432'
 })
 
-// const client = new Client({
-//     connectionString: connectionString
-// })
-//
-// client.connect((err) => {
-//     console.log('hello');
-//     if (err) {
-//         console.error('connection error', err.stack);
-//     } else {
-//         console.log('connected');
-//     }
-// });
-
 client.connect();
+
 client.query('SELECT * FROM companies', null, (err, res) => {
     if(err) {
         console.log(err);
